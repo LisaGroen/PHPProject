@@ -1,7 +1,7 @@
 <center>
 <?php
 
-$regel = 20;
+$regel = 30;
 
 for ($i = 0; $i < $regel; $i++) {
     for ($j = 0; $j < $i; $j++) {
@@ -9,3 +9,11 @@ for ($i = 0; $i < $regel; $i++) {
     }
     echo "<br>";
 }
+
+$stam = 4;
+
+for ($a = 0; $a < $stam; $a++){
+    echo "****<br>";
+}
+?>
+</center>
