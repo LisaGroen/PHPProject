@@ -1,4 +1,5 @@
 <?php
+
 $kappersagenda["9.15"] = "Mevr. Pietersen";
 $kappersagenda["9.30"] = "Mevr. Willems";
 $kappersagenda["9.45"] = "";
