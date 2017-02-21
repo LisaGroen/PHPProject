@@ -1,7 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Gebruiker
- * Date: 17-2-2017
- * Time: 09:17
- */
+$kappersagenda["9.15"] = "Mevr. Pietersen";
+$kappersagenda["9.30"] = "Mevr. Willems";
+$kappersagenda["9.45"] = "";
+$kappersagenda["10.00"] = "Paul van den Broek";
+$kappersagenda["10.15"] = "Karel de meeuw";
+$kappersagenda["10.15"] = "";
+
+print("De volgende momenten zijn nog beschikbaar:<ul>");
+foreach($kappersagenda as $tijd => $afspraak) {
+    if($afspraak == "") {
+        print("<li>".$tijd."</li>") ;
+    }
+}
+print("</ul>");
