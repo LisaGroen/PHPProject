@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65786bac-c014-46fe-a78a-69111eddb2df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/les5_functies_includes/functies_getal.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/les5_functies_includes/functies_graden.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/les5_functies_includes/functies_string.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -21,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <state relative-caret-position="730">
+              <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -41,7 +38,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zwemclubs.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="zwemclubs.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/les4_zwemclubs_kapperszaak/zwemclubs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
@@ -345,7 +342,7 @@
       <workItem from="1487675957747" duration="2856000" />
       <workItem from="1487682147620" duration="192000" />
       <workItem from="1487850407447" duration="1341000" />
-      <workItem from="1488361070481" duration="2093000" />
+      <workItem from="1488361070481" duration="2273000" />
     </task>
     <task id="LOCAL-00001" summary="^^">
       <created>1486457410836</created>
@@ -487,11 +484,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487682195083</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="^^">
+      <created>1488364410176</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1488364410176</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30027000" />
+    <option name="totallyTimeSpent" value="30207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
@@ -804,14 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="37" column="7" lean-forward="true" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/les4_zwemclubs_kapperszaak/kapperzaak.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -840,6 +836,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="730">
+          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
           <folding />
         </state>
       </provider>
