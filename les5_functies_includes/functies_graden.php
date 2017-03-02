@@ -1,7 +1,5 @@
 <?php
 
-
-
 function graden() {
 
     $celsius  = 5;
