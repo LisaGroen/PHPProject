@@ -8,6 +8,6 @@ function graden() {
     echo "$celsius Celsius = $fahrenheit Fahrenheit";
 }
 
-echo "<h2>". "Opdracht functies_graden" ."</h2>";
+echo "<h3>". "Opdracht functies_graden" ."</h3>";
 
 graden();

@@ -4,6 +4,6 @@ function letters(){
     echo strrev("Hello world!");
 }
 
-echo "<h2>". "Opdracht functies_string" ."</h2>";
+echo "<h3>". "Opdracht functies_string" ."</h3>";
 
 letters();

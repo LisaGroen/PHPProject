@@ -11,7 +11,7 @@ function checkgetal() {
     return $check;
 }
 
-echo "<h2>". "Opdracht functies_getal" ."</h2>";
+echo "<h3>". "Opdracht functies_getal" ."</h3>";
 
 if (checkgetal()) {
     echo "getal is deelbaar door 3";

@@ -1,4 +1,4 @@
-<center>
+<div style="text-align: center;">
 <?php
 
 $regel = 30;
@@ -16,4 +16,4 @@ for ($a = 0; $a < $stam; $a++){
     echo "****<br>";
 }
 ?>
-</center>
+</div>
