@@ -7,8 +7,8 @@ $users = array(
 );
 
 if(isset($_POST['knop'])
-       && isset($users[$_POST["email"]])
-       && $users[$_POST["email"]] == $_POST['ww']) {
+    && isset($users[$_POST["email"]])
+    && $users[$_POST["email"]] == $_POST['ww']) {
     $bericht = "Welkom!";
 } elseif (isset($_POST['knop'])) {
     $bericht = "Sorry, geen toegang";
