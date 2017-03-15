@@ -3,20 +3,16 @@
 $bericht = "Inloggen";
 
 
-$admin = array(
-    "lisa" => "bryan",
-    "bryan" => "lisa",
-);
-
 if (isset($_POST['knop'])) {
+
     function inLoggenGebruiker()
     {
         $loginGebruiker = false;
 
         $gebruiker = array(
-            "mick" => "hallo",
+            "mick" => "hoi",
             "corne" => "oy",
-            "thom" => "hoi",
+            "thom" => "hallo",
         );
 
         if (isset($_POST['knop'])
@@ -29,13 +25,40 @@ if (isset($_POST['knop'])) {
         }
         return $loginGebruiker;
     }
+
+    function inLoggenAdmin()
+    {
+        $loginAdmin = false;
+
+        $admin = array(
+            "lisa" => "bryan",
+            "bryan" => "lisa",
+        );
+
+        if (isset($_POST['knop'])
+            && isset($admin[$_POST["naam"]])
+            && $admin[$_POST["naam"]] == $_POST['ww'])
+        {
+            $loginAdmin = true;
+        } elseif (isset($_POST['knop'])) {
+            $loginAdmin = false;
+        }
+        return $loginAdmin;
+    }
+
+
+    if (inLoggenGebruiker() == true) {
+        $bericht = "Hallo gebruiker";
+    }
+    elseif (inLoggenAdmin() == true) {
+        $bericht = "Hallo admin";
+    }
+    else {
+        $bericht = "Naam of wachtwoord klopt niet";
+    }
 }
 
-if (inLoggenGebruiker() == true) {
-    $bericht = "Welkom!";
-} else {
-    $bericht = "Sorry, geen toegang";
-}
+
 
 ?>
 
@@ -45,7 +68,7 @@ if (inLoggenGebruiker() == true) {
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <div class="form-group">
         <label for="naam">Naam:</label>
-        <input type="text" name="email" value="" title="">
+        <input type="text" name="naam" value="" title="">
     </div>
     <div class="form-group">
         <label for="ww">Wachtwoord:</label>
