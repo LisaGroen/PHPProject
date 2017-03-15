@@ -23,14 +23,13 @@ if (isset($_POST['knop'])) {
         }
         return $login;
     }
-}
 
-if (inLoggen() == true) {
-    $bericht = "Welkom!";
-} else {
-    $bericht = "Sorry, geen toegang";
+    if (inLoggen() == true) {
+        $bericht = "Welkom!";
+    } else {
+        $bericht = "Sorry, geen toegang";
+    }
 }
-
 ?>
 
 <html>
