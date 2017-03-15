@@ -1,19 +1,34 @@
 <?php
 
-$users = array(
-    "piet@worldonline.nl" => "doetje123",
-    "klaas@carpets.nl" => "snoepje777",
-    "truushendriks@wegweg.nl" => "arkiearkie201",
-);
+$bericht = "Inloggen";
 
-if(isset($_POST['knop'])
-    && isset($users[$_POST["email"]])
-    && $users[$_POST["email"]] == $_POST['ww']) {
-    $bericht = "Welkom!";
-} elseif (isset($_POST['knop'])) {
-    $bericht = "Sorry, geen toegang";
-} else {
-    $bericht = "Inloggen";
+if (isset($_POST['knop'])) {
+    function inLoggen()
+    {
+        $login = false;
+
+        $users = array(
+            "piet@worldonline.nl" => "doetje123",
+            "klaas@carpets.nl" => "snoepje777",
+            "truushendriks@wegweg.nl" => "arkiearkie201",
+        );
+
+        if (isset($_POST['knop'])
+            && isset($users[$_POST["email"]])
+            && $users[$_POST["email"]] == $_POST['ww']
+        ) {
+            $login = true;
+        } elseif (isset($_POST['knop'])) {
+            $login = false;
+        }
+        return $login;
+    }
+
+    if (inLoggen() == true) {
+        $bericht = "Welkom!";
+    } else {
+        $bericht = "Sorry, geen toegang";
+    }
 }
 ?>
 
