@@ -38,11 +38,11 @@ if (isset($_POST['knop'])) {
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <div class="form-group">
         <label for="email">Email:</label>
-        <input type="text" name="email" value="">
+        <input type="text" name="email" value="" title="">
     </div>
     <div class="form-group">
         <label for="ww">Wachtwoord:</label>
-        <input type="password" name="ww" value="">
+        <input type="password" name="ww" value="" title="">
     </div>
     <input type="submit" name="knop">
 </form>
