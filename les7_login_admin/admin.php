@@ -2,30 +2,36 @@
 
 $bericht = "Inloggen";
 
-if (isset($_POST['knop'])) {
-    function inLoggen()
-    {
-        $login = false;
 
-        $users = array(
-            "piet@worldonline.nl" => "doetje123",
-            "klaas@carpets.nl" => "snoepje777",
-            "truushendriks@wegweg.nl" => "arkiearkie201",
+$admin = array(
+    "lisa" => "bryan",
+    "bryan" => "lisa",
+);
+
+if (isset($_POST['knop'])) {
+    function inLoggenGebruiker()
+    {
+        $loginGebruiker = false;
+
+        $gebruiker = array(
+            "mick" => "hallo",
+            "corne" => "oy",
+            "thom" => "hoi",
         );
 
         if (isset($_POST['knop'])
-            && isset($users[$_POST["email"]])
-            && $users[$_POST["email"]] == $_POST['ww']
-        ) {
-            $login = true;
+            && isset($gebruiker[$_POST["naam"]])
+            && $gebruiker[$_POST["naam"]] == $_POST['ww'])
+        {
+            $loginGebruiker = true;
         } elseif (isset($_POST['knop'])) {
-            $login = false;
+            $loginGebruiker = false;
         }
-        return $login;
+        return $loginGebruiker;
     }
 }
 
-if (inLoggen() == true) {
+if (inLoggenGebruiker() == true) {
     $bericht = "Welkom!";
 } else {
     $bericht = "Sorry, geen toegang";
@@ -38,7 +44,7 @@ if (inLoggen() == true) {
 <h1><?php echo $bericht; ?></h1>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <div class="form-group">
-        <label for="email">Email:</label>
+        <label for="naam">Naam:</label>
         <input type="text" name="email" value="" title="">
     </div>
     <div class="form-group">
