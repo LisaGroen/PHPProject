@@ -5,6 +5,26 @@ $bericht = "Inloggen";
 
 if (isset($_POST['knop'])) {
 
+    function inLoggenAdmin()
+    {
+        $loginAdmin = false;
+
+        $admin = array(
+            "lisa" => "bryan",
+            "bryan" => "lisa",
+        );
+
+        if (isset($_POST['knop'])
+            && isset($admin[$_POST["naam"]])
+            && $admin[$_POST["naam"]] == $_POST['ww'])
+        {
+            $loginAdmin = true;
+        } elseif (isset($_POST['knop'])) {
+            $loginAdmin = false;
+        }
+        return $loginAdmin;
+    }
+
     function inLoggenGebruiker()
     {
         $loginGebruiker = false;
@@ -26,39 +46,16 @@ if (isset($_POST['knop'])) {
         return $loginGebruiker;
     }
 
-    function inLoggenAdmin()
-    {
-        $loginAdmin = false;
-
-        $admin = array(
-            "lisa" => "bryan",
-            "bryan" => "lisa",
-        );
-
-        if (isset($_POST['knop'])
-            && isset($admin[$_POST["naam"]])
-            && $admin[$_POST["naam"]] == $_POST['ww'])
-        {
-            $loginAdmin = true;
-        } elseif (isset($_POST['knop'])) {
-            $loginAdmin = false;
-        }
-        return $loginAdmin;
-    }
-
-
-    if (inLoggenGebruiker() == true) {
-        $bericht = "Hallo gebruiker";
-    }
-    elseif (inLoggenAdmin() == true) {
+    if (inLoggenAdmin() == true) {
         $bericht = "Hallo admin";
+    }
+    elseif (inLoggenGebruiker() == true) {
+        $bericht = "Hallo gebruiker";
     }
     else {
         $bericht = "Naam of wachtwoord klopt niet";
     }
 }
-
-
 
 ?>
 
