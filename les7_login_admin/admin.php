@@ -1,60 +1,27 @@
 <?php
+session_start();
 
-$bericht = "Inloggen";
+$users = array(
+    "bryan" => array("ww" => "7410", "rol" => "Admin"),
+    "thom" => array("ww" => "8520", "rol" => "Gebruiker"),
+    "lisa" => array("ww" => "9630", "rol" => "Admin")
+);
 
+if(isset($_GET["loguit"])) {
+    $_SESSION = array();
+    session_destroy();
+}
 
-if (isset($_POST['knop'])) {
-
-    function inLoggenAdmin()
-    {
-        $loginAdmin = false;
-
-        $admin = array(
-            "lisa" => "bryan",
-            "bryan" => "lisa",
-        );
-
-        if (isset($_POST['knop'])
-            && isset($admin[$_POST["naam"]])
-            && $admin[$_POST["naam"]] == $_POST['ww'])
-        {
-            $loginAdmin = true;
-        } elseif (isset($_POST['knop'])) {
-            $loginAdmin = false;
-        }
-        return $loginAdmin;
-    }
-
-    function inLoggenGebruiker()
-    {
-        $loginGebruiker = false;
-
-        $gebruiker = array(
-            "mick" => "hoi",
-            "corne" => "oy",
-            "thom" => "hallo",
-        );
-
-        if (isset($_POST['knop'])
-            && isset($gebruiker[$_POST["naam"]])
-            && $gebruiker[$_POST["naam"]] == $_POST['ww'])
-        {
-            $loginGebruiker = true;
-        } elseif (isset($_POST['knop'])) {
-            $loginGebruiker = false;
-        }
-        return $loginGebruiker;
-    }
-
-    if (inLoggenAdmin() == true) {
-        $bericht = "Hallo admin";
-    }
-    elseif (inLoggenGebruiker() == true) {
-        $bericht = "Hallo gebruiker";
-    }
-    else {
-        $bericht = "Naam of wachtwoord klopt niet";
-    }
+if(isset($_POST['knop'])
+      && isset($users[$_POST["login"]])
+      && $users[$_POST["login"]]["ww"] == $_POST['ww']) {
+    $_SESSION["user"] = array("naam" => $_POST["login"],
+                              "ww" => $users[$_POST["login"]]['ww'],
+                              "rol" => $users[$_POST["login"]]['rol']);
+    $bericht = "Welkom ".$_SESSION["user"]["naam"]." met de rol "
+                        .$_SESSION["user"]["rol"];
+} else {
+    $bericht = "Inloggen";
 }
 
 ?>
@@ -64,14 +31,17 @@ if (isset($_POST['knop'])) {
 <h1><?php echo $bericht; ?></h1>
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
     <div class="form-group">
-        <label for="naam">Naam:</label>
-        <input type="text" name="naam" value="" title="">
+        <label for="login">Login</label>
+        <input type="text" name="login" value="">
     </div>
     <div class="form-group">
         <label for="ww">Wachtwoord:</label>
-        <input type="password" name="ww" value="" title="">
+        <input type="password" name="ww" value="">
     </div>
     <input type="submit" name="knop">
 </form>
+<p><a href="website.php">Website</a></p>
+<p><a href="adminwebsite.php">Admingedeelte</a></p>
+<p><a href="admin.php?loguit">Uitloggen</a></p>
 </body>
 </html>
