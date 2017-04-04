@@ -1,23 +1,26 @@
 <?php
 
+    include_once('AapOverzicht.php');
+    include_once('Aap.php');
+
     $ao = new AapOverzicht();
-    $ao->voegAapToe(new Aap("Baviaan"));
-    $ao->voegAapToe(new Aap("Guereza"));
-    $ao->voegAapToe(new Aap("Langoer"));
-    $ao->voegAapToe(new Aap("Neusaap"));
-    $ao->voegAapToe(new Aap("Tamarin"));
-    $ao->voegAapToe(new Aap("Brulaap"));
-    $ao->voegAapToe(new Aap("Halfaap"));
-    $ao->voegAapToe(new Aap("Mandril"));
-    $ao->voegAapToe(new Aap("Oeakari"));
-    $ao->voegAapToe(new Aap("Faunaap"));
-    $ao->voegAapToe(new Aap("Hoelman"));
-    $ao->voegAapToe(new Aap("Meerkat"));
-    $ao->voegAapToe(new Aap("Oormaki"));
-    $ao->voegAapToe(new Aap("Gorilla"));
-    $ao->voegAapToe(new Aap("Kuifaap"));
-    $ao->voegAapToe(new Aap("Mensaap"));
-    $ao->voegAapToe(new Aap("Spinaap"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Baviaan&tbm=isch \">", "Baviaan"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Guereza&tbm=isch \">", "Guereza"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Langoer&tbm=isch \">", "Langoer"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Neusaap&tbm=isch \">", "Neusaap"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Tamarin&tbm=isch \">", "Tamarin"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Brulaap&tbm=isch \">", "Brulaap"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Halfaap&tbm=isch \">", "Halfaap"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Mandril&tbm=isch \">", "Mandril"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Oeakari&tbm=isch \">", "Oeakari"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Faunaap&tbm=isch \">", "Faunaap"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Hoelman&tbm=isch \">", "Hoelman"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Meerkat&tbm=isch \">", "Meerkat"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Oormaki&tbm=isch \">", "Oormaki"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Gorilla&tbm=isch \">", "Gorilla"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Kuifaap&tbm=isch \">", "Kuifaap"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Mensaap&tbm=isch \">", "Mensaap"));
+    $ao->voegAapToe(new Aap("<a class=\"aap\" href=\"https://www.google.nl/search?q=Spinaap&tbm=isch \">", "Spinaap"));
 
 ?>
 
@@ -52,8 +55,12 @@
 </head>
 <body>
     <img src="img/monkey-business.jpg">
-    <p>select your monkey!</p>
+    <p>Select your monkey!</p>
     <img src="img/monkey_swings.png">
 
-    <a class="aap" href="https://www.google.nl/search?q=Baviaan&tbm=isch ">Baviaan</a><br>
+    <?php
+    foreach ($ao->getApen() as $aap) {
+        echo $aap->getWebsite().$aap->getAap()."<br>";
+    }
+    ?>
 </body>
