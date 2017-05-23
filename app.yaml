@@ -16,5 +16,5 @@ handlers:
     
 - url: /.*
   static_files: index.html
-  upload: index.html
+  upload: index_begin.html
   application_readable: true
